@@ -24,6 +24,7 @@ rootProject.name = "Notimoji"
 include(":app")
 
 include(":core:designsystem")
+include(":core:domain")
 include(":core:ui")
 
 // added because of gradle problem, mentioned in https://issuetracker.google.com/issues/328871352
