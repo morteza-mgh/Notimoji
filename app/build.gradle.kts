@@ -1,21 +1,21 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.notimoji.android.application)
+    alias(libs.plugins.notimoji.android.application.compose)
+    alias(libs.plugins.notimoji.android.application.flavors)
+    alias(libs.plugins.notimoji.android.hilt)
 }
 
 android {
     namespace = "mgh.morteza.notimoji"
-    compileSdk = 35
+    compileSdk = BuildVersions.compileSdk
 
     defaultConfig {
         applicationId = "mgh.morteza.notimoji"
-        minSdk = 24
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = BuildVersions.versionCode
+        versionName = BuildVersions.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -27,16 +27,10 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
     buildFeatures {
-        compose = true
+        buildConfig = true
     }
+
 }
 
 dependencies {
