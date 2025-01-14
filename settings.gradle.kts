@@ -23,7 +23,8 @@ dependencyResolutionManagement {
 rootProject.name = "Notimoji"
 include(":app")
 
+include(":core:ui")
+
 // added because of gradle problem, mentioned in https://issuetracker.google.com/issues/328871352
 // test to remove this line after upgrading gradle
 gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:convention:testClasses"))
- 
