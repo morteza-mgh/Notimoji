@@ -32,6 +32,8 @@ include(":core:domain")
 include(":core:model")
 include(":core:ui")
 
+include(":feature:main")
+
 // added because of gradle problem, mentioned in https://issuetracker.google.com/issues/328871352
 // test to remove this line after upgrading gradle
 gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:convention:testClasses"))
