@@ -35,14 +35,27 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.hilt.navigation.compose.hiltViewModel
 import mgh.morteza.core.designsystem.HORIZONTAL_PADDING
 import mgh.morteza.core.designsystem.component.NotimojiTextField
 import mgh.morteza.core.designsystem.component.NotimojiTopAppBar
 import mgh.morteza.core.designsystem.theme.NotimojiTheme
 import mgh.morteza.core.ui.component.EmojiItem
 
+
 @Composable
-fun MainScreen(uiState: MainUiState, onNewSearchInput: (String) -> Unit) {
+fun MainScreen(
+    navigateToNoteDetails: (id: String) -> Unit,
+    viewModel: MainViewModel = hiltViewModel()
+) {
+    MainScreen(
+        uiState = viewModel.uiState,
+        onNewSearchInput = { /*TODO*/ }
+    )
+}
+
+@Composable
+private fun MainScreen(uiState: MainUiState, onNewSearchInput: (String) -> Unit) {
     Scaffold(
         modifier = Modifier
             .fillMaxSize(),
