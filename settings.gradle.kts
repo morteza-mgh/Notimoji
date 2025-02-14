@@ -32,6 +32,7 @@ include(":core:domain")
 include(":core:model")
 include(":core:ui")
 
+include(":feature:add")
 include(":feature:main")
 
 // added because of gradle problem, mentioned in https://issuetracker.google.com/issues/328871352
